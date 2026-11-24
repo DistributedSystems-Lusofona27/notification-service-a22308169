@@ -1,0 +1,2 @@
+-- Your schema goes here. One database per service: this file must not create
+-- tables that belong to another service.

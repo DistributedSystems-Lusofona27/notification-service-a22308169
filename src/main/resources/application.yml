@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: CHANGE-ME-service
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${POSTGRES_DB:changeme_db}
+    username: ${POSTGRES_USER:app}
+    password: ${POSTGRES_PASSWORD:app}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
+    consumer:
+      group-id: CHANGE-ME-service
+      auto-offset-reset: earliest
+
+server:
+  port: ${SERVER_PORT:8091}
